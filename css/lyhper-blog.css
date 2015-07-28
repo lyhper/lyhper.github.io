@@ -1,21 +1,18 @@
 nav.navbar{
-	z-index: 3;
-	background-color: rgba(255, 255, 255, 0);
-	border-width: 0;
+	z-index: 3;	
+	margin:0;
 }
-
-.navbar-header .navbar-brand{
-	font-weight: 800;
-	color: #fff;
+@media only screen and (min-width: 768px){
+	nav.navbar{
+		background-color: rgba(255, 255, 255, 0);
+		border-width: 0;
+	}
+	.navbar-header .navbar-brand,.navbar-custom .nav li a{
+		font-weight: 800;
+		color: #fff;
+	}
 }
-.navbar-custom .nav li a{
-	font-weight: 800;
-	color:#fff;
-}
-
 .intro-header{
-	height: 680px;
-	width:100%;
 	background-image: url(../img/home-bg.jpg);
 	background-size: cover;
 }
@@ -23,13 +20,21 @@ nav.navbar{
 .intro-header .cont-header{
 	color: #fff;
 	text-align: center;
-	padding: 180px 0;
+	
+}
+.intro-header .cont-header{
+	padding:50px 0;
+}
+@media only screen and (min-width: 768px){
+	.intro-header .cont-header h1{
+		font-size: 80px;
+		font-weight: 800;
+	}
+	.intro-header .cont-header{
+		padding: 210px 0;
+	}
 }
 
-.intro-header .cont-header h1{
-	font-size: 80px;
-	font-weight: 800;
-}
 hr.intro-divi{
 	width: 250px;
 	border-top:solid 5px;
