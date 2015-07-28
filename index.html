@@ -13,10 +13,11 @@ layout: default
           <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
         </h2>
         <span>Posted by Liu on {{ post.date | date: "%b %-d, %Y" }}</span>
-        <hr />
+        
 
         
       </li>
+      <hr />
     {% endfor %}
   </ul>
 

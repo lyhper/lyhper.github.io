@@ -42,6 +42,12 @@ hr.intro-divi{
 .intro-header .cont-header .sub-header{
 	font-size: 25px;
 }
+section ul{
+	list-style: none;
+	padding-left: 10px;
+}
+
+
 .sns-footer{
 	margin:30px auto;
 }
@@ -67,12 +73,3 @@ hr.intro-divi{
 .sns-footer p{
 	text-align: center;
 }
-
-
-
-
-
-
-
-
-
