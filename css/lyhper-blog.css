@@ -50,13 +50,20 @@ section ul{
 	list-style: none;
 	padding-left: 0;
 }
-section ul li h2{
+section ul li a:hover{
+	text-decoration: none;
+}
+section ul li a h2{
 	font-size: 21px;
 	color: #404040;
 }
 section ul li a article{
 	font-style: italic;
 	color: #a3a3a3;
+}
+
+section ul li a:hover h2,section ul li a:hover article{
+	color: #337ab7;
 }
 @media only screen and (min-width: 768px){
 	section ul li h2{
