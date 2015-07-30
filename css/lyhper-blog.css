@@ -16,7 +16,11 @@ nav.navbar{
 	background-image: url(../img/home-bg.jpg);
 	background-size: cover;
 }
-
+@media only screen and (min-width: 768px){
+	.intro-header{
+		margin-bottom: 20px;
+	}
+}
 .intro-header .cont-header{
 	color: #fff;
 	text-align: center;
@@ -46,10 +50,19 @@ section ul{
 	list-style: none;
 	padding-left: 0;
 }
-section ul li{
-	margin-left: 40px;
+section ul li h2{
+	font-size: 21px;
+	color: #404040;
 }
-
+section ul li a article{
+	font-style: italic;
+	color: #a3a3a3;
+}
+@media only screen and (min-width: 768px){
+	section ul li h2{
+		font-size: 26px;
+	}
+}
 
 .sns-footer{
 	margin:30px auto;
