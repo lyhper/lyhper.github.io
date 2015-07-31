@@ -7,21 +7,20 @@ layout: default
     header.intro-header{
         background-image: url('{{ site.baseurl }}/{% if page.header-img %}{{ page.header-img }}{% else %}{{ site.header-img }}{% endif %}')
     }
+    section article{
+      padding: 20px 0;
+    }
     @media only screen and (min-width: 768px){
         .intro-header .cont-header{
           padding: 100px 0;
         }
+        .intro-header .cont-header h1{
+          font-size: 55px;
+        }
     }
 </style>
-<div>
 
-  <header>
-    <h1>{{ page.title }}</h1>
-    <p>{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
-  </header>
+<article>
+  {{ content }}
+</article>
 
-  <article>
-    {{ content }}
-  </article>
-
-</div>

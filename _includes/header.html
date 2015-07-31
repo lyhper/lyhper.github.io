@@ -25,10 +25,10 @@
       <div class="container">
     <div class="row">
       <div class="col-lg-12">
-      <div class="cont-header">
-        <h1>lyhper Blog</h1>
+      <div class="cont-header"> 
+        <h1>{% if page.title %}{{ page.title }}{% else %}lyhper Blog{% endif %}</h1>
         <hr class="intro-divi"/>
-        <span class="sub-header">born to code</span>
+        <span class="sub-header">{% if page.date %}{{ page.date | date: "%b %-d, %Y"}}{% else %}born to code{% endif %}</span>
        </div>
       </div>
     </div>  
