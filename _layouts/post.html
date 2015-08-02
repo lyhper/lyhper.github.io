@@ -4,12 +4,22 @@ layout: default
 
 
 <style type="text/css">
-    header.intro-header{
+    .intro-header{
         background-image: url('{{ site.baseurl }}/{% if page.header-img %}{{ page.header-img }}{% else %}{{ site.header-img }}{% endif %}')
+    }
+    section article h2{
+      font-size: 25px;
+    }
+    @media only screen and (max-width: 768px){
+      .intro-header .cont-header h1{
+        font-size: 25px;
+      }
+      section article h2{
+        font-size: 20px;
+      }
     }
     section article{
       padding: 20px 0;
-      font-size: 17px;
     }
     @media only screen and (min-width: 768px){
         .intro-header .cont-header{
