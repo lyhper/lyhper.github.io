@@ -11,6 +11,7 @@ JavaScript主要通过八种方式创建对象，包括`创建Object的实例`�
 ##创建Object的实例
 
 最简单的方式是创建一个Object的实例，然后再为其添加属性和方法，如下所示：
+
 {% highlight ruby %}
 var person=new Object();
 //添加属性
@@ -20,6 +21,7 @@ person.sayName=function(){
   alert(this.name);
 }
 {% endhighlight %}
+
 但使用这种方法有一个缺点，就是会产生大量冗余代码。
 
 
