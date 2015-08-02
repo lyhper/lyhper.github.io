@@ -6,8 +6,10 @@ categories: JavaScript
 header-img: img/JavaScript-create-object.jpg
 ---
 
-JavaScript主要通过八种方式创建对象，包括创建Object的实例，工厂模式，构造函数模式，原型模式，构造函数和原型模式相结合，动态原型模式，寄生构造函数模式和稳妥构造函数模式。
-## 创建Object的实例
+JavaScript主要通过八种方式创建对象，包括`创建Object的实例`，`工厂模式`，`构造函数模式`，`原型模式`，`构造函数和原型模式相结合`，`动态原型模式`，`寄生构造函数模式`和`稳妥构造函数模式`。
+
+创建Object的实例
+
 最简单的方式是创建一个Object的实例，然后再为其添加属性和方法，如下所示：
 {% highlight ruby %}
 var person=new Object();
