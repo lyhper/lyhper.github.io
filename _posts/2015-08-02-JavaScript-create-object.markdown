@@ -49,6 +49,25 @@ person1.sayName();//xiaoming
 构造函数可以用来创造特定类型的对象，比如Object这种原生构造函数。构造函数一般会将其首字母大写以作区分。构造函数其实也是函数，只不过专门被用于创建对象。代码如下所示：
 
 {% highlight ruby %}
+function Person(name){
+  this.name=name;
+  this.sayName=function(){
+    alert(this.name);
+  }
+}
+var person1=new Person("xiaoming");
+person1.sayName();//xiaoming
+{% endhighlight %}
+
+用new操作符执行这个函数会经历如下步骤：
+
+1、创建对象；
+
+2、将构造函数作用域赋给新对象，使this指向新对象；
+
+3、执行构造函数中的代码；
+
+4、返回新对象；
 
 
 
