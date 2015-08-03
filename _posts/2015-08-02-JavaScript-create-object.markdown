@@ -20,10 +20,35 @@ person.name="xiaoming";
 person.sayName=function(){
   alert(this.name);
 }
+person.sayName();//xiaoming
 {% endhighlight %}
 
 但使用这种方法有一个缺点，就是会产生大量冗余代码。
 
+##工厂模式
+
+工厂模式就是用函数来封装创建对象的细节，如下所示：
+
+{% highlight ruby %}
+function person(name){
+  var o =new Object();
+  o.name=name;
+  o.sayName=function(){
+    alert(this.name); 
+  }
+  return o;
+}
+var person1=person("xiaoming");
+person1.sayName();//xiaoming
+{% endhighlight %}
+
+使用这种方法也有缺点，那就是无法确定这个对象属于哪个类别，即对象识别问题
+
+##构造函数模式
+
+构造函数可以用来创造特定类型的对象，比如Object这种原生构造函数。构造函数一般会将其首字母大写以作区分。构造函数其实也是函数，只不过专门被用于创建对象。代码如下所示：
+
+{% highlight ruby %}
 
 
 
