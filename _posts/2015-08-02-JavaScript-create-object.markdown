@@ -73,5 +73,25 @@ person1.sayName();//xiaoming
 
 ##原型模式
 
+每一个函数都有一个prototype属性，即原型属性，它是一个对象，包含了所有同一类型的实例所共享的属性和方法。代码如下：
+
+{% highlight ruby %}
+function Person(){};
+Person.prototype.name="xiaoming";
+Person.prototype.sayName=function(){
+  alert(this.name);
+}
+var person1=new Person();
+person1.sayName();//xiaoming
+{% endhighlight %}
+
+通过原型模式创建的同一类型的对象将共享这些属性和方法，而这也带来了新的问题——事实上，每个对象的属性并不应该被共享。
+
+
+
+
+
+
+
 
 
