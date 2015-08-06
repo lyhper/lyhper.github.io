@@ -87,6 +87,26 @@ person1.sayName();//xiaoming
 
 通过原型模式创建的同一类型的对象将共享这些属性和方法，而这也带来了新的问题——事实上，每个对象的属性并不应该被共享。
 
+##构造函数与原型模式相结合
+
+这种方法就是将对象的属性通过构造函数创建，而将对象的方法通过原型的方式创建。代码如下：
+
+{% highlight ruby %}
+function Person(name){
+  this.name=name;
+}
+Person.prototype.sayName=function(){
+  alert(this.name);
+}
+var person1=new Person("xiaoming");
+person1.sayName();//xiaoming
+{% endhighlight %}
+
+这是最常见的创建类型的方法，通过这种方法创建的对象将共享方法，而不共享属性
+
+
+
+
 
 
 
