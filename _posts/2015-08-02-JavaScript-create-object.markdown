@@ -121,6 +121,24 @@ var person1=new Person("xiaoming");
 person1.sayName();//xiaoming
 {% endhighlight %}
 
+##寄生构造函数模式
+
+代码如下：
+
+{% highlight ruby %}
+function Person(name){
+  var o = new Object();
+  o.name=name;
+  o.sayName=function(){
+    alert(this.name);
+  }
+  return o;
+}
+var person=new Person("xiaoming");
+person.sayName();//xiaoming
+{% endhighlight %}
+
+其实这个方法除了使用new关键字和函数名首字母大写外，与工厂模式完全相同。构造函数默认会返回新对象的实例，而此代码中return o将覆盖构造函数返回的值
 
 
 
