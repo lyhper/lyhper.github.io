@@ -140,8 +140,23 @@ person.sayName();//xiaoming
 
 其实这个方法除了使用new关键字和函数名首字母大写外，与工厂模式完全相同。构造函数默认会返回新对象的实例，而此代码中return o将覆盖构造函数返回的值
 
+##稳妥构造函数模式
 
+要了解稳妥构造函数，首先得知道稳妥对象，即没有公共属性，其方法也不引用this对象的对象。稳妥对象适合一些安全的环境，这种环境往往需要防止数据被其他应用程序改动。代码如下：
 
+{% highlight ruby %}
+function Person(name){
+  var o = new Object();
+  o.sayName=function(){
+    alert(name); 
+  }
+  return o;
+}
+var person=Person("xiaoming");
+person.sayName();//xiaoming
+{% endhighlight %}
+
+person保存的便是稳妥对象，这种方法创建的对象将只能通过sayName方法访问name属性
 
 
 
