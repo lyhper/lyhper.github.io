@@ -106,6 +106,22 @@ person1.sayName();//xiaoming
 
 ##动态原型模式
 
+观察上一种模式，你会发现构造函数与原型是分离的，而动态原型将所有的信息都封装在了一起，并且同时使用了构造函数和原型的优点。代码如下：
+
+{% highlight ruby %}
+function Person(name){
+  this.name=name;
+  if(typeof this.sayName!="function"){
+    Person.prototype.sayName=function(){
+      alert(this.name);
+    }
+  }
+}
+var person1=new Person("xiaoming");
+person1.sayName();//xiaoming
+{% endhighlight %}
+
+
 
 
 
