@@ -10,4 +10,32 @@ JavaScript主要通过以下6种方式来实现对象的继承，包括`原型�
 
 ##原型链
 
+此方法主要是通过将父类的实例赋值给子类的原型，从而将父类的属性与方法存于子类的原型中，实现继承。代码如下：
+
+{% highlight ruby %}
+function Food(){
+  this.isEatable=true;
+}
+Food.prototype.getIsEatable=function(){
+  alert(this.isEatable);
+}
+function Fruit(){
+  this.hasWater=true;
+}
+
+//实现继承
+Fruit.prototype=new Food();
+
+Fruit.prototype.getHasWater=function(){
+  alert(this.hasWater);
+}
+var fruit1=new Fruit();
+fruit1.getIsEatable();//true
+console.log(fruit1 instanceof Food);//true
+{% endhighlight %}
+
+当要查找某个属性或方法时，会沿着原型链向上查找，直到找到为止。即首先查找实例，然后查找子类的原型，最后查找父类的原型。
+
+
+
 
