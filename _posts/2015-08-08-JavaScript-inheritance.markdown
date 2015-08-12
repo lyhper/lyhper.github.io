@@ -38,6 +38,27 @@ console.log(fruit1 instanceof Food);//true
 
 ##构造函数
 
+这种方法的主要思想是在子类的作用域中调用父类的构造函数实现继承。代码如下：
+
+{% highlight ruby %}
+function Food(){
+  this.isEatable=true;
+}
+function Fruit(){
+  this.hasWater=true;
+  //实现继承
+  Food.call(this);
+}
+var fruit1=new Fruit();
+console.log(fruit1.isEatable);//true
+{% endhighlight %}
+
+构造函数的方法实现继承也会存在一个问题，那就是方法的复用。因此，实际应用中很少会单独使用构造函数的方法。
+
+
+
+
+
 
 
 
