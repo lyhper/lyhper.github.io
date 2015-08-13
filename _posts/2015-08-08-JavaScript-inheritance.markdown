@@ -55,6 +55,39 @@ console.log(fruit1.isEatable);//true
 
 构造函数的方法实现继承也会存在一个问题，那就是方法的复用。因此，实际应用中很少会单独使用构造函数的方法。
 
+##组合继承
+
+组合继承实际上就是将以上两种方式相结合的一种方法，代码如下：
+
+{% highlight ruby %}
+function Food(){
+  this.isEatable=true;
+}
+Food.prototype.getIsEatable=function(){
+  alert(this.isEatable);
+}
+function Fruit(){
+  this.hasWater=true;
+  //构造函数继承属性
+  Food.call(this);
+}
+//原型链方式继承属性和方法
+Fruit.prototype=new Food();
+
+Fruit.prototype.getHasWater=function(){
+  alert(this.hasWater);
+}
+var fruit1=new Fruit();
+fruit1.getIsEatable();//true
+{% endhighlight %}
+
+这种方法结合了构造函数方式和原型链方式的优点，同时避免了单独使用任一方式的缺点，它也是最常用的实现继承的方法。
+
+
+
+
+
+
 
 
 
