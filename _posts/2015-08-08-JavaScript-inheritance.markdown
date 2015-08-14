@@ -83,6 +83,30 @@ fruit1.getIsEatable();//true
 
 这种方法结合了构造函数方式和原型链方式的优点，同时避免了单独使用任一方式的缺点，它也是最常用的实现继承的方法。
 
+##原型式继承
+
+原型式继承的主要思想是基于已有的对象通过原型创建新对象，代码如下：
+
+{% highlight ruby %}
+var person={
+  name:“xiaoming",
+  friends:["xiaohong","xiaogang"]
+};
+function createPerson(o){
+  function F(){};
+  F.prototype=o;
+  return new F();
+}
+var person1=createPerson(person);
+person1.name="xiaoli";
+console.log(person1.name);//xiaoli
+person1.friends.push("xiaozhang");
+console.log(person1.friends);//xiaohong,xiaogang,xiaozhang
+
+var person2=createPerson(person);
+person2.friends.push("xiaoling");
+console.log(person2.friends);//xiaohong,xiaogang,xiaozhang,xiaoling
+{% endhighlight %}
 
 
 
