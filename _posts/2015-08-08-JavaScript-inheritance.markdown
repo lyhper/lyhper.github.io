@@ -110,7 +110,7 @@ console.log(person2.friends);//xiaohong,xiaogang,xiaozhang,xiaoling
 
 因为createPerson里将person的属性赋给了F的原型，因此这些属性将被所有创建的对象所共享
 
-
+##寄生式继承
 
 
 
