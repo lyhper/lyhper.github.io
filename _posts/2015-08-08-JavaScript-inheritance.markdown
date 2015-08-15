@@ -112,6 +112,34 @@ console.log(person2.friends);//xiaohong,xiaogang,xiaozhang,xiaoling
 
 ##寄生式继承
 
+寄生式继承相当于是对原型式继承的一种增强，添加了每个对象自己的方法，代码如下：
+
+{% highlight ruby %}
+function object(o){
+  function F(){};
+  F.prototype=o;
+  return new F();
+}
+function createPerson(original){
+  var temp=object(original);
+  temp.sayName=function(){
+    alert(this.name);
+  }
+  return temp;
+}
+var person={
+  name:"xiaoming",
+  friends:["xiaozhang","xiaowang","xiaoli"]
+};
+var person1=createPerson(person);
+person1.sayName();//xiaoming
+console.log(person1.friends);//xiaozhang,xiaowang,xiaoli
+{% endhighlight %}
+
+这种方法也存在一个问题，那就是方法的复用问题，每个对象的方法同名不同质
+
+
+
 
 
 
