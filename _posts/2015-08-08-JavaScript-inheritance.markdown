@@ -140,7 +140,39 @@ console.log(person1.friends);//xiaozhang,xiaowang,xiaoli
 
 ##寄生组合式继承
 
-寄生组合式继承的主要思想就是利用构造函数和复制原型对象的方式实现继承
+寄生组合式继承的主要思想就是利用构造函数和复制原型对象的方式实现继承，代码如下：
+
+{% highlight ruby %}
+function object(o){
+  function F(){};
+  F.prototype=o;
+  return new F();
+}
+function inheritPrototype(superType,subType){
+  var prototype=object(superType.prototype);
+  prototype.constructor=subType;//将原型对象的构造函数属性指向子类
+  subType.prototype=prototype;
+}
+function SuperType(){
+  this.name="xiaoming";
+}
+SuperType.prototype.sayName=function(){
+  alert(this.name);
+}
+function SubType(){
+  Super.call(this);//调用超类构造函数继承属性
+  this.age=21;
+}
+inheritPrototype(SuperType,SubType);//将超类原型复制到子类原型
+Subtype.prototype.sayAge=function(){
+  alert(this.age);
+}
+var person1=new SubType();
+person1.sayName();//xiaoming
+{% endhighlight %}
+
+利用这种方式实现继承只调用了一次超类构造函数，从而避免了在原型上创建不必要的属性
+
 
 
 
