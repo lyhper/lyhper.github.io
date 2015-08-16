@@ -138,7 +138,9 @@ console.log(person1.friends);//xiaozhang,xiaowang,xiaoli
 
 这种方法也存在一个问题，那就是方法的复用问题，每个对象的方法同名不同质
 
+##寄生组合式继承
 
+寄生组合式继承的主要思想就是利用构造函数和复制原型对象的方式实现继承
 
 
 
