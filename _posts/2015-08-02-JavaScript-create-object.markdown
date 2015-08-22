@@ -1,7 +1,7 @@
 ---
 layout: post
 title: JavaScript创建对象
-date: 2015-08-02 20:17
+date: 2015-08-02 20:17:00
 categories: JavaScript
 header-img: img/JavaScript-create-object.jpg
 ---

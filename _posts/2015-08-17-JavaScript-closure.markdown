@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 谈谈JS闭包
-date: 2015-08-17 23:25
+date: 2015-08-17 23:25:00
 categories: JavaScript
 header-img: img/JavaScript-closure.jpg
 ---
