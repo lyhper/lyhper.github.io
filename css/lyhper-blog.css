@@ -19,7 +19,7 @@ nav.navbar{
 	}
 }
 .intro-header{
-	background-image: url(../img/home-bg.jpg);
+	background: url(../img/home-bg.jpg) no-repeat center center;
 	background-size: cover;
 }
 @media only screen and (min-width: 768px){

@@ -64,4 +64,4 @@ chain(a)("f1",1)("f2",2)("f3",3);
 
 采用这种方式实现的链式调用，其调用方式会与jQuery那种"点"+“函数”的方式有些不同，这种方式是直接跟一对括号，括号里边第一个参数是obj的函数名，后边的参数则是需要传递给obj里边函数的参数。
 
-解释一下这句obj[arguments[0]].apply(obj,slice.call(arguments,1))，首先看slice.call(arguments,1)，这句是将arguments这个类数组对象转化为数组，且是从类数组对象中第二个值开始，因为第一个值是传过来的obj里的函数名；再看obj[arguments[0]]，这句就是取得obj内指定的函数;这样一来就清晰了，这句话实际上意思就是执行那个obj里的函数，并把参数传进去。
+解释一下这句obj[arguments[0]].apply(obj, slice.call(arguments,1))，首先看slice.call(arguments,1)，这句是将arguments这个类数组对象转化为数组，且是从类数组对象中第二个值开始，因为第一个值是传过来的obj里的函数名；再看obj[arguments[0]]，这句就是取得obj内指定的函数;这样一来就清晰了，这句话实际上意思就是执行那个obj里的函数，并把参数传进去。
