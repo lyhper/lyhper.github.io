@@ -109,6 +109,10 @@ section ul li a:hover h2,section ul li a:hover article{
 .sns-footer p{
 	text-align: center;
 }
+.friendly-link{
+	color:#000;
+	font-size: 12px;
+}
 .footer-count{
 	text-align: center;
 	color:#BBC7CC;
