@@ -2,19 +2,28 @@
 layout: default
 ---
 
-
-
-
-  <ul>
-    {% for post in site.posts %}
-      <li>
-        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
-          <h2>{{ post.title }}</h2>
-          <article>{{ post.excerpt }}</article>
-        </a>
-        <span>Posted by Liu on {{ post.date | date: "%b %-d, %Y" }}</span>
-      </li>
-      <hr />
-    {% endfor %}
-  </ul>
-
+<ul>
+  {% for post in paginator.posts %}
+    <li>
+      <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
+        <h2>{{ post.title }}</h2>
+        <article>{{ post.excerpt }}</article>
+      </a>
+      <span>Posted by Liu on {{ post.date | date: "%b %-d, %Y" }}</span>
+    </li>
+    <hr />
+  {% endfor %}
+</ul>
+<div class="pagination">
+  {% if paginator.previous_page %}
+    <a href="/page{{ paginator.previous_page }}" class="previous">Previous</a>
+  {% else %}
+    <span class="previous">Previous</span>
+  {% endif %}
+  <span class="page_number ">Page: {{ paginator.page }} of {{ paginator.total_pages }}</span>
+  {% if paginator.next_page %}
+    <a href="/page{{ paginator.next_page }}" class="next">Next</a>
+  {% else %}
+    <span class="next ">Next</span>
+  {% endif %}
+</div>
