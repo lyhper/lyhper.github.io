@@ -30,21 +30,14 @@ nav.navbar{
 		margin-bottom: 20px;
 	}
 }
-.intro-header .cont-header{
+.heading{
 	color: #fff;
 	text-align: center;
-	
-}
-.intro-header .cont-header{
-	padding:50px 0;
 }
 @media only screen and (min-width: 768px){
-	.intro-header .cont-header h1{
+	.heading{
 		font-size: 80px;
 		font-weight: 800;
-	}
-	.intro-header .cont-header{
-		padding: 210px 0;
 	}
 }
 
@@ -69,12 +62,16 @@ section ul li a:focus{
 section ul li a h2{
 	font-size: 21px;
 	color: #404040;
+	margin-top: 0;
 }
 section ul li a article{
 	font-style: italic;
 	color: #a3a3a3;
 }
-
+.card-action span{
+	margin: 13px 16px;
+	display: block;
+}
 section ul li a:hover h2,section ul li a:hover article{
 	color: #337ab7;
 }

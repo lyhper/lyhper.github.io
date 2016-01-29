@@ -4,14 +4,19 @@ layout: default
 
 <ul>
   {% for post in paginator.posts %}
-    <li>
-      <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
-        <h2>{{ post.title }}</h2>
-        <article>{{ post.excerpt }}</article>
-      </a>
-      <span>Posted by Liu on {{ post.date | date: "%b %-d, %Y" }}</span>
+    <li class="card">
+      <div class="card-main">
+        <div class="card-inner">
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
+            <h2>{{ post.title }}</h2>
+            <article>{{ post.excerpt }}</article>
+          </a>
+        </div>
+        <div class="card-action">
+          <span>Posted by Liu on {{ post.date | date: "%b %-d, %Y" }}</span>
+        </div>
+      </div>
     </li>
-    <hr />
   {% endfor %}
 </ul>
 {% if paginator.total_pages > 1 %}
