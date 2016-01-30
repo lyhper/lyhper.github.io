@@ -1,36 +1,44 @@
-
-    <header class="intro-header">
-       <nav class="navbar navbar-default navbar-custom">
-    <div class="container-fluid">
-      <!-- Brand and toggle get grouped for better mobile display -->
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="/">lyhper Blog</a>
-      </div>
-
-      <!-- Collect the nav links, forms, and other content for toggling -->
-      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <ul class="nav navbar-nav navbar-right">
-          <li><a href="/">Home</a></li>
-          <li><a href="{{ site.baseurl }}/about.html">About</a></li>
-        </ul>
-      </div><!-- /.navbar-collapse -->
-    </div><!-- /.container-fluid -->
-    </nav>
-      <div class="container">
-    <div class="row">
-      <div class="col-lg-12">
-      <div class="cont-header"> 
-        <h1>{% if page.title %}{{ page.title }}{% else %}lyhper Blog{% endif %}</h1>
-        <hr class="intro-divi"/>
-        <span class="sub-header">{% if page.date %}{{ page.date | date: "%b %-d, %Y"}}{% else %}born to code{% endif %}</span>
-       </div>
-      </div>
-    </div>  
-      </div>
-    </header>
+<header class="header header-transparent header-waterfall">
+    <ul class="nav nav-list pull-left">
+        <li>
+            <a data-toggle="menu" href="#doc_menu">
+                <span class="icon icon-lg">menu</span>
+            </a>
+        </li>
+    </ul>
+    <a class="header-logo margin-left-no" href="/index.html">lyhper</a>
+    <ul class="nav nav-list pull-right">
+        <li class="dropdown margin-right">
+            <a class="dropdown-toggle padding-left-no padding-right-no" data-toggle="dropdown">
+                <span class="access-hide">Yuhang Liu</span>
+                <span class="avatar avatar-sm"><img alt="lyhper avatar" src="/img/favicon.ico"></span>
+            </a>
+            <ul class="dropdown-menu">
+                <li>
+                    <a class="padding-right-lg waves-attach" href="/about.html"><span class="icon icon-lg margin-right">account_box</span>About Me</a>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</header>
+<nav aria-hidden="true" class="menu" id="doc_menu" tabindex="-1">
+    <div class="menu-scroll">
+        <div class="menu-content">
+            <a class="menu-logo" href="/index.html">Categories</a>
+            <ul class="nav">
+                {% for category in site.categories %}
+                    <li>
+                        <a class="collaosed waves-attach" data-toggle="collapse" href="#{{ category|first }}">{{ category|first }} ({{ category | last | size }})</a>
+                        <ul class="collapse menu-collapse" id="{{ category|first }}">
+                            {% for post in category.last %}
+                            <li>
+                                <a class="waves-attach" href="{{ post.url }}">{{ post.title }}</a>
+                            </li>
+                            {% endfor %}
+                        </ul>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</nav>

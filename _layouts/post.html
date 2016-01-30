@@ -12,12 +12,21 @@ layout: default
     }
     p{
       font-size: 17px;
+      line-height: 1.5;
+    }
+    .cont-header{
+        overflow: hidden;
+        width:60%;
+    }
+    .cont-header h2{
+        margin-top: 0;
+        font-weight: bold;
     }
     section article h2{
       font-size: 25px;
     }
     @media only screen and (max-width: 768px){
-      .intro-header .cont-header h1{
+      .cont-header h2{
         font-size: 25px;
       }
       section article h2{
@@ -37,9 +46,15 @@ layout: default
     }
 </style>
 
-<article>
-  {{ content }}
-</article>
+<div class="card">
+    <div class="card-main">
+        <div class="card-inner">
+            <article>
+                {{ content }}
+            </article>
+        </div>
+    </div>
+</div>
 
 <!-- 多说评论框 start -->
   <div class="ds-thread" data-thread-key="{{ page.date | date: "%Y-%m-%d"}}" data-title="{{ page.title }}" data-url="{{ site.url }}{{ page.url }}"></div>
@@ -52,7 +67,7 @@ var duoshuoQuery = {short_name:"lyhper"};
     ds.type = 'text/javascript';ds.async = true;
     ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
     ds.charset = 'UTF-8';
-    (document.getElementsByTagName('head')[0] 
+    (document.getElementsByTagName('head')[0]
      || document.getElementsByTagName('body')[0]).appendChild(ds);
   })();
   </script>

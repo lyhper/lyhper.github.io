@@ -1,27 +1,43 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="Hans">
 
   {% include head.html %}
 
-  <body>
+  <body class="page-brand">
 
     {% include header.html %}
 
-    <section>
+    <main class="content">
+      <div class="content-heading" style="background-image: url('/{% if page.header-img %}{{ page.header-img }}{% else %}{{ site.header-img }}{% endif %}')">
         <div class="container">
           <div class="row">
-            <div class="col-lg-8 col-lg-offset-2">
+            <div class="col-lg-6 col-lg-push-3 col-sm-10 col-sm-push-1">
+              <h1 class="heading">Born to code</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+      <section>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-10 col-lg-offset-1 col-sm-10 col-sm-offset-1">
               {{ content }}
             </div>
           </div>
         </div>
-    </section>
-
-    
-
+      </section>
+    </main>
     {% include footer.html %}
-    
-    <script src="{{ "/js/bootstrap.min.js" | prepend: site.baseurl }}"></script>
+    <div class="fbtn-container">
+      <div class="fbtn-inner">
+        <a class="fbtn fbtn-brand-accent fbtn-lg" data-toggle="dropdown"><span class="fbtn-text">Links</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+        <div class="fbtn-dropdown">
+          <a class="fbtn fbtn-green" href="https://github.com/lyhper/lyhper.github.io" target="_blank"><span class="fbtn-text">Fork me on GitHub</span><span class="icon">code</span></a>
+          <a class="fbtn fbtn-brand" href="http://weibo.com/liuyuhangblog" target="_blank"><span class="fbtn-text">Follow lyhper on weibo</span><i class="fa fa-weibo"></i></a>
+          <a class="fbtn" href="https://github.com/lyhper" target="_blank"><span class="fbtn-text">Follow lyhper on Github</span><i class="fa fa-github"></i></a>
+        </div>
+      </div>
+    </div>
   </body>
 
 </html>
