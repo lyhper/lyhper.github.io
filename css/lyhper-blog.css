@@ -1,9 +1,19 @@
 body{
 	font-family: "microsoft yahei";
 }
-
-.content-heading .heading{
+code{
+	border:none;
+}
+code .p{
+	display: inline;
+}
+.content-heading{
 	text-align: center;
+}
+.content-heading .heading{
+	font-weight: bold;
+}
+section article h2{
 	font-weight: bold;
 }
 section ul{
