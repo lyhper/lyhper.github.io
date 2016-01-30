@@ -1,52 +1,10 @@
 body{
 	font-family: "microsoft yahei";
 }
-nav.navbar{
-	z-index: 3;	
-	margin:0;
-}
-.navbar-default .navbar-toggle:hover,.navbar-default .navbar-toggle:focus{
-	background-color: inherit;
-}
-.navbar-default .navbar-toggle:active{
-	background-color: #ddd;
-}
-@media only screen and (min-width: 768px){
-	nav.navbar{
-		background-color: rgba(255, 255, 255, 0);
-		border-width: 0;
-	}
-	.navbar-header .navbar-brand,.navbar-custom .nav li a{
-		font-weight: 800;
-		color: #fff;
-	}
-}
-.intro-header{
-	background: url(../img/home-bg.jpg) no-repeat center center;
-	background-size: cover;
-}
-@media only screen and (min-width: 768px){
-	.intro-header{
-		margin-bottom: 20px;
-	}
-}
-.heading{
-	color: #fff;
-	text-align: center;
-}
-@media only screen and (min-width: 768px){
-	.heading{
-		font-size: 80px;
-		font-weight: 800;
-	}
-}
 
-hr.intro-divi{
-	width: 250px;
-	border-top:solid 5px;
-}
-.intro-header .cont-header .sub-header{
-	font-size: 25px;
+.content-heading .heading{
+	text-align: center;
+	font-weight: bold;
 }
 section ul{
 	list-style: none;
@@ -80,9 +38,11 @@ section ul li a:hover h2,section ul li a:hover article{
 		font-size: 26px;
 	}
 }
-
+.pagination{
+	text-align: right;
+}
 .sns-footer{
-	margin:30px auto;
+	margin-bottom: 20px;
 }
 .sns-footer ul{
 	text-align: center;
@@ -105,6 +65,7 @@ section ul li a:hover h2,section ul li a:hover article{
 
 .sns-footer p{
 	text-align: center;
+	font-size: 12px;
 }
 .friendly-link{
 	color:#000;

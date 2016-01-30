@@ -1,7 +1,7 @@
 ---
-layout: page
-title: About Me
+layout: default
 ---
+<link rel="stylesheet" href="/css/about.css">
 <link rel="stylesheet" href="{{ "/css/typeit.css" | prepend: site.baseurl }}">
 <style type="text/css">
   @media only screen and (min-width: 768px){
@@ -10,7 +10,13 @@ title: About Me
     }
   }
 </style>
-<p class="type-it"></p>
+<div class="card">
+  <div class="card-main">
+    <div class="card-inner">
+      <p class="type-it"></p>
+    </div>
+  </div>
+</div>
 
 <script src="{{ "/js/typeit.js" | prepend: site.baseurl }}"></script>
 <script type="text/javascript">

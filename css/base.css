@@ -1467,7 +1467,10 @@ template,
   }
 }
 .container {
-  margin:0 auto;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 16px;
+  padding-left: 16px;
 }
 .container:after, .container:before {
   content: "";
@@ -5645,7 +5648,9 @@ div[data-toggle="tile"] [data-ignore="tile"] {
   position: relative;
   z-index: 1;
 }
-
+.content-heading .heading {
+  font-weight: 300;
+}
 
 .page-brand .content-heading {
   background-color: #3f51b5;
