@@ -7,7 +7,7 @@ categories: JavaScript
 
 在JavaScript中，this的使用非常灵活，在不同的场景下往往指向不同的内容，但始终满足一个条件，那就是指向调用此函数的对象。以下将列出一些比较常见的情况。
 
-##1、闭包中的this
+## 1、闭包中的this
 
 {% highlight ruby %}
 function test() {
@@ -20,7 +20,7 @@ test();
 
 此时this指向的不是外层函数，而是全局对象window
 
-##2、在全局作用域下执行函数
+## 2、在全局作用域下执行函数
 
 {% highlight ruby %}
 function test() {
@@ -31,7 +31,7 @@ test();
 
 此时this指向window对象
 
-##3、对象中的函数
+## 3、对象中的函数
 
 {% highlight ruby %}
 var a = {
@@ -44,7 +44,7 @@ a.test();
 
 此时this指向调用它的对象a
 
-##4、构造函数
+## 4、构造函数
 
 {% highlight ruby %}
 function Test() {
@@ -56,7 +56,7 @@ console.log(test1.name);
 
 在使用new构造对象时，this会被设置为指向新构造的对象实例
 
-##5、setTimeout、setInterval
+## 5、setTimeout、setInterval
 
 {% highlight ruby %}
 var timer = setTimeout(function(){
@@ -66,7 +66,7 @@ var timer = setTimeout(function(){
 
 setTimeout、setInterval的执行函数中的this指向window对象
 
-##6、其他
+## 6、其他
 
 {% highlight ruby %}
 var a = {

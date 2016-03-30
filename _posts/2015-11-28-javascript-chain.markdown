@@ -8,7 +8,7 @@ header-img: img/javascript-chain.jpg
 
 用过jQuery的话，对链式调用肯定不会陌生，像这样:$("#test").mouseenter().mouseleave(),这就是链式调用，这样写的话可以节省代码量，而不用像这样写:$("#test").mouseenter()；$("#test").mouseleave()。在js里要是这样写的话，肯定是会报错的，要想实现这样的效果需要进行一些特殊的处理。
 
-##在方法内返回对象自身
+## 在方法内返回对象自身
 
 {% highlight ruby %}
 var a = {
@@ -30,7 +30,7 @@ a.f1().f2().f3();
 
 这样就很轻松地实现了链式调用
 
-##返回函数自身
+## 返回函数自身
 
 {% highlight ruby %}
 function chain(obj){
