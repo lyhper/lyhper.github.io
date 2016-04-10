@@ -1,9 +1,4 @@
----
-layout: post
-title: 经典排序算法之js实现
-date: 2016-04-10 12:12:00
-categories: Algorithm
----
+
 
 包含冒泡、选择、插入、归并、快速排序
 
