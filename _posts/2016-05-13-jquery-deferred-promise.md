@@ -5,9 +5,12 @@ categories: JavaScript
 date: 2016-05-13
 ---
 jquery从1.5版本开始引入deferred对象，旨在提供一套回调函数解决方案。
+
 ## what's deferred/promise?
 deferred（延迟）是由$.Deferred()创建的一个对象，它可用于以链式调用的语法将多个回调函数注册到一个回调函数队列里。deferred对象有三种状态——进行时、已成功、已失败，处于已成功状态时则调用.done()方法指定的函数，处于已失败状态时则调用.fail()方法指定的函数，处于进行时状态则调用.progress()方法指定的函数。deferred对象包含resolve()和reject()两个方法，分别将自己的状态设置为已成功和已失败，从而判定接下来调用哪个函数。promise对象相当于deferred对象的精简版，包含.done()，.fail()等方法，移除了.resolve(),.reject()等改变自身状态的方法，从而防止执行状态被外部修改。
+
 ## how to use deferred/promise?
+
 ### ajax操作
 jquery中ajax操作会返回一个promise对象，如var promise = $.ajax('/')，因此ajax操作后可以直接使用deferred对象的所有方法（除了resolve和reject等改变自身状态的方法）。举个例子：
 {% highlight ruby %}
@@ -17,6 +20,7 @@ $.ajax('/').done(function(data){
 	// 一些操作
 })
 {% endhighlight %}
+
 ### 普通操作
 为普通操作添加回调函数需要调用$.Deferred()方法自主创建deferred对象，代码如下：
 {% highlight ruby %}
@@ -33,7 +37,9 @@ wait().done(function(){
 	console.log('后续操作');
 })
 {% endhighlight %}
+
 ## what're advantages of deferred/promise?
+
 ### 允许添加多个回调函数
 {% highlight ruby %}
 $.ajax('/').done(function(){
@@ -66,6 +72,7 @@ $.ajax('/').then(function(){
 })
 {% endhighlight %}
 这里的执行结果会是符合预期的，即先打印1，再打印2。这里第二个回调函数会等待第一个回调函数执行完毕后再执行，因为第一个.then()函数传入的方法返回了一个自己创建的deferred对象，从而覆盖了默认deferred对象的执行状态。
+
 ### 为多个操作指定回调函数
 使用$.when()可以为多个操作指定回调函数，例如：
 {% highlight ruby %}
@@ -74,5 +81,6 @@ $.when($.ajax('/test1'),$.ajax('/test2')).done(function(xhr1,xhr2){
 })
 {% endhighlight %}
 当所有操作均执行成功则调用.done()方法指定的回调函数,且回调函数返回的参数为xhr对象而非数据。只有当$.when()只传入了一个deferred对象时回调函数返回的参数才是数据。
+
 ### 为所有普通操作指定回调函数
 deferred/promise使得不仅可以为ajax操作添加回调函数，还可以为其他普通操作添加回调函数，示例见上。
