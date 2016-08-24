@@ -3,7 +3,7 @@ layout: post
 title: Node.js异步解决方案之async
 categories: Node.js
 header-img: img/nodejs-async-bg.jpg
-date: 2016-08-20
+date: 2016-08-20 18:00:00
 ---
 很久没有更新blog，趁今天周末闲下来总结下。
 
