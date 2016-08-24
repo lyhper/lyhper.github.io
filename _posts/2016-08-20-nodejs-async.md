@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Node.js异步解决方案之async
-categories: Node.js
+categories: Nodejs
 header-img: img/nodejs-async-bg.jpg
 date: 2016-08-20 18:00:00
 ---
