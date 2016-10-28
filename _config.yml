@@ -1,6 +1,6 @@
 title: lyhper Blog
 header-img: img/home-bg.jpg
-url: http://lyhfe.com
+url: http://lyhper.com
 description: 这里记录我的学习与生活
 paginate: 5
 paginate_path: "/page:num"
